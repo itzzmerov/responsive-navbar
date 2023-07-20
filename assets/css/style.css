@@ -2,19 +2,15 @@
 
 :root {
     --color-white: #fff;
-    --color-white-variant: #E5E5E5;
     --primary-color: #14213D;
     --accent-color: #FCA311;
     --color-black: #000;
-    --border-radius: 25px;
-    --border-black: 3px solid #000;
-    --border-yellow: 2px solid #FCA311;
     --roboto-font: 'Roboto Slab', serif;
     --rocksalt-font: 'Rock Salt', cursive;
 }
 
 * {
-    font-family: var(--roboto-font);
+    font-family: var(--rocksalt-font);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,7 +38,7 @@ header {
     position: relative;
     padding: 0 2rem;
     height: 100vh;
-    background-image: url(../images/background.png);
+    background-image: url(../images/background-1.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -82,25 +78,25 @@ header {
 
 .navbar .socials a #facebook {
     font-size: 1.5rem;
-    color: rgb(81, 206, 255);
+    color: rgb(3, 182, 253);
     margin-left: 0.5rem;
 }
 
 .navbar .socials a #github {
     font-size: 1.5rem;
-    color: rgb(233, 163, 130);
+    color: rgb(185, 90, 46);
     margin-left: 0.5rem;
 }
 
 .navbar .socials a #linkedin {
     font-size: 1.5rem;
-    color: rgb(144, 180, 235);
+    color: rgb(43, 102, 190);
     margin-left: 0.5rem;
 }
 
 .navbar .socials a #twitter {
     font-size: 1.5rem;
-    color: rgb(118, 191, 240);
+    color: rgb(21, 139, 218);
     margin-left: 0.5rem;
 }
 
@@ -144,6 +140,20 @@ header {
     color: var(--accent-color);
     font-size: 2rem;
     transition: 0.4s;
+}
+
+#tooltip {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none;
+    display: none;
+    font-family: var(--roboto-font);
 }
 
 /********* DROPDOWN MENU *********/
