@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Rock+Salt&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-white-variant: #E5E5E5;
+    --primary-color: #14213D;
+    --accent-color: #FCA311;
+    --color-black: #000;
+    --border-radius: 25px;
+    --border-black: 3px solid #000;
+    --border-yellow: 2px solid #FCA311;
+    --roboto-font: 'Roboto Slab', serif;
+    --rocksalt-font: 'Rock Salt', cursive;
+}
+
+* {
+    font-family: var(--roboto-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+a:hover {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    transition: 0.7s;
+}
+
+/********* NAVIGATION BAR *********/
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    height: 100vh;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a img {
+    width: 95px;
+    height: auto;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+    font-weight: 500;
+}
+
+.navbar .toggle_btn {
+    color: var(--color-black);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .toggle_btn:hover {
+    color: var(--accent-color);
+}
+
+.navbar .socials a #facebook {
+    font-size: 1.5rem;
+    color: rgb(81, 206, 255);
+    margin-left: 0.5rem;
+}
+
+.navbar .socials a #github {
+    font-size: 1.5rem;
+    color: rgb(233, 163, 130);
+    margin-left: 0.5rem;
+}
+
+.navbar .socials a #linkedin {
+    font-size: 1.5rem;
+    color: rgb(144, 180, 235);
+    margin-left: 0.5rem;
+}
+
+.navbar .socials a #twitter {
+    font-size: 1.5rem;
+    color: rgb(118, 191, 240);
+    margin-left: 0.5rem;
+}
+
+.navbar .socials a:hover #facebook,
+.navbar .socials a:hover #linkedin,
+.navbar .socials a:hover #github,
+.navbar .socials a:hover #twitter {
+    color: var(--accent-color);
+    font-size: 2rem;
+    transition: 0.4s;
+}
+
+.dropdown_menu .socials a #facebook {
+    font-size: 1.5rem;
+    color: rgb(15, 64, 83);
+    margin-left: 0.5rem;
+}
+
+.dropdown_menu .socials a #github {
+    font-size: 1.5rem;
+    color: rgb(105, 57, 34);
+    margin-left: 0.5rem;
+}
+
+.dropdown_menu .socials a #linkedin {
+    font-size: 1.5rem;
+    color: rgb(38, 75, 131);
+    margin-left: 0.5rem;
+}
+
+.dropdown_menu .socials a #twitter {
+    font-size: 1.5rem;
+    color: rgb(37, 131, 194);
+    margin-left: 0.5rem;
+}
+
+.dropdown_menu .socials a:hover #facebook,
+.dropdown_menu .socials a:hover #linkedin,
+.dropdown_menu .socials a:hover #github,
+.dropdown_menu .socials a:hover #twitter {
+    color: var(--accent-color);
+    font-size: 2rem;
+    transition: 0.4s;
+}
+
+/********* DROPDOWN MENU *********/
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 100px;
+    width: 300px;
+    height: 0;
+    background: rgba(0,0,0,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 260px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/********* RESPONSIVENESS DESIGN *********/
+
+@media (max-width: 992px) {
+    /********* TABLET *********/
+    .navbar .links, .navbar .socials {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) { 
+    /********* PHONE *********/
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
